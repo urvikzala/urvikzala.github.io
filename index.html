@@ -201,7 +201,7 @@
 
   .visual-frame img { width: 100%; display: block; }
 
-  .tableauPlaceholder { width: 100%; min-height: 420px; }
+  tableau-viz { width: 100%; height: 500px; display: block; }
 
   .data-table {
     width: 100%;
@@ -318,37 +318,12 @@
       </div>
       <div>
         <div class="visual-frame">
-        <div class='tableauPlaceholder' id='vizStudentStress' style='position: relative'>
-          <noscript>
-            <a href='#'>
-              <img alt='Student Stress and Mental Health Analysis' src='https://public.tableau.com/static/images/St/StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis/1_rss.png' style='border: none' />
-            </a>
-          </noscript>
-          <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/St/StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-          </object>
-        </div>
-        <script type='text/javascript'>
-          var divElement = document.getElementById('vizStudentStress');
-          var vizElement = divElement.getElementsByTagName('object')[0];
-          vizElement.style.width='100%';
-          vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascript/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
+        <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+        <tableau-viz id="tableauViz"
+          src="https://public.tableau.com/views/StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis"
+          toolbar="bottom"
+          hide-tabs>
+        </tableau-viz>
         </div>
       </div>
     </div>
