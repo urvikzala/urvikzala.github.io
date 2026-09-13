@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Urviksinh Zala — Data Analyst Portfolio</title>
+<title>Urviksinh Zala | Data Analyst Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -184,6 +184,11 @@
 
   .findings li strong { font-weight: 600; }
 
+  .visual-caption {
+    margin: 12px 0 0;
+    font-size: 0.9rem;
+  }
+
   .view-link {
     display: inline-block;
     font-weight: 500;
@@ -281,8 +286,8 @@
 <header class="hero">
   <div class="wrap hero-inner">
     <h1>Urviksinh Zala</h1>
-    <p class="role">Data Analyst — SQL, Excel &amp; Tableau</p>
-    <p class="lede">Two projects, two unrelated datasets — a student mental health survey and Spotify streaming data — built around the same habit: get to a specific number, then be honest about what it can and can't prove.</p>
+    <p class="role">Data Analyst: SQL, Excel &amp; Tableau</p>
+    <p class="lede">Two projects, two unrelated datasets: a student mental health survey and Spotify streaming data. Both built around the same habit: get to a specific number, then be honest about what it can and can't prove.</p>
     <div class="hero-links">
       <a href="https://github.com/urvikzala" target="_blank" rel="noopener">GitHub</a>
       <a href="#student-stress">Student Stress Project</a>
@@ -310,46 +315,17 @@
     <div class="project-body">
       <div>
         <ul class="findings">
-          <li>Bullying is linked to a <strong>55% increase in anxiety</strong> and a <strong>33% drop in self-esteem</strong> between the least- and most-bullied groups — though the pattern isn't perfectly linear, so I'm treating it as an association, not proof.</li>
+          <li>Bullying is linked to a <strong>55% increase in anxiety</strong> and a <strong>33% drop in self-esteem</strong> between the least- and most-bullied groups. The pattern isn't perfectly linear, though, so I'm treating it as an association, not proof.</li>
           <li>High-stress students show a <strong>2.83-point drop in sleep quality</strong>, the single largest lifestyle swing anywhere in the dataset.</li>
-          <li>One mental-health-score group breaks the pattern entirely — the lowest study load in the dataset, but still weak academic performance. Flagged as an open question rather than an assumption about motivation.</li>
+          <li>One mental-health-score group breaks the pattern entirely: the lowest study load in the dataset, but still weak academic performance. Flagged as an open question rather than an assumption about motivation.</li>
         </ul>
         <a class="view-link" href="https://github.com/urvikzala/student-stress-excel-tableau-analysis" target="_blank" rel="noopener">View the full analysis on GitHub</a>
       </div>
       <div>
         <div class="visual-frame">
-        <div class='tableauPlaceholder' id='viz1789325764396' style='position: relative'>
-          <noscript>
-            <a href='#'>
-              <img alt='Student Stress and Mental Health Analysis' src='https://public.tableau.com/static/images/St/StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis/1_rss.png' style='border: none' />
-            </a>
-          </noscript>
-          <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/St/StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-          </object>
+          <img src="https://raw.githubusercontent.com/urvikzala/student-stress-excel-tableau-analysis/main/images/dashboard.png" alt="Student Stress and Mental Health Analysis dashboard">
         </div>
-        <script type='text/javascript'>
-          var divElement = document.getElementById('viz1789325764396');
-          var vizElement = divElement.getElementsByTagName('object')[0];
-          vizElement.style.width='100%';
-          vizElement.style.height='550px';
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-        </div>
+        <p class="visual-caption"><a class="view-link" href="https://public.tableau.com/views/StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">View the interactive dashboard on Tableau Public</a></p>
       </div>
     </div>
   </div>
@@ -362,7 +338,7 @@
       <h2>Record Label Performance in Spotify's Most-Streamed Songs</h2>
       <span class="project-tools">SQLite</span>
     </div>
-    <p class="project-question">Which record label is actually running the smartest business — and how much of its lead is new hits versus old catalogue?</p>
+    <p class="project-question">Which record label is actually running the smartest business, and how much of its lead is new hits versus old catalogue?</p>
 
     <div class="stat-row">
       <div class="stat"><span class="num">4,600</span><span class="label">tracks analyzed</span></div>
@@ -374,9 +350,9 @@
     <div class="project-body">
       <div>
         <ul class="findings">
-          <li>Universal leads on total streams, but <strong>61.8% of that comes from pre-2020 catalogue</strong> — a lot of the lead is legacy, not new hits.</li>
-          <li>Independent artists convert TikTok attention into Spotify streams at <strong>285.94%</strong> — more than five times Sony's rate of 53.5%, though on a sample of just two artists.</li>
-          <li><strong>Avicii still sits at 178% of Universal's per-artist average</strong>, six years after his death — one of the clearer signals of how long a strong catalogue keeps earning.</li>
+          <li>Universal leads on total streams, but <strong>61.8% of that comes from pre-2020 catalogue</strong>, meaning a lot of the lead is legacy, not new hits.</li>
+          <li>Independent artists convert TikTok attention into Spotify streams at <strong>285.94%</strong>, more than five times Sony's rate of 53.5%, though on a sample of just two artists.</li>
+          <li><strong>Avicii still sits at 178% of Universal's per-artist average</strong>, six years after his death. That's one of the clearer signals of how long a strong catalogue keeps earning.</li>
         </ul>
         <a class="view-link" href="https://github.com/urvikzala/record-labels-sql-analysis" target="_blank" rel="noopener">View the full analysis on GitHub</a>
       </div>
