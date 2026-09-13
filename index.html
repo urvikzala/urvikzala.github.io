@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urviksinh Zala — Data Analyst Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --surface: #EFEFEA;
+    --ink: #1B2130;
+    --muted: #5C6270;
+    --accent: #1F3A5C;
+    --accent-soft: #E4EAF0;
+    --rule: #D8D8D2;
+    --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --sans: 'IBM Plex Sans', -apple-system, 'Segoe UI', Arial, sans-serif;
+    --mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- Header / Hero ---------- */
+  header.hero {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .hero-inner { max-width: 760px; }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 3.4rem;
+    line-height: 1.08;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero .role {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--accent);
+    margin: 0 0 28px;
+  }
+
+  .hero p.lede {
+    font-size: 1.15rem;
+    color: var(--ink);
+    max-width: 62ch;
+    margin: 0 0 32px;
+  }
+
+  .hero-links {
+    display: flex;
+    gap: 24px;
+    font-size: 0.95rem;
+  }
+
+  .hero-links a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    margin-right: 24px;
+  }
+  .hero-links a:last-child { margin-right: 0; }
+  .hero-links a:hover { opacity: 0.75; }
+
+  /* ---------- Project sections ---------- */
+  .project {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .project:nth-child(even) { background: var(--surface); }
+
+  .project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .project-head h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin: 0;
+    max-width: 20ch;
+  }
+
+  .project-tools {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .project-question {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 62ch;
+    margin: 0 0 40px;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 44px;
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat .num {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.1rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat .label {
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+
+  .project-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .project:nth-child(odd) .project-body { direction: rtl; }
+  .project:nth-child(odd) .project-body > * { direction: ltr; }
+
+  .findings {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .findings li {
+    padding-left: 20px;
+    border-left: 2px solid var(--accent);
+    font-size: 1rem;
+  }
+
+  .findings li strong { font-weight: 600; }
+
+  .view-link {
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .view-link:hover { opacity: 0.75; }
+
+  .visual-frame {
+    background: #fff;
+    border: 1px solid var(--rule);
+    padding: 16px;
+  }
+
+  .visual-frame img { width: 100%; display: block; }
+
+  .tableauPlaceholder { width: 100%; min-height: 420px; }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    background: #fff;
+  }
+
+  .data-table caption {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--muted);
+    padding: 12px 14px 0;
+  }
+
+  .data-table th, .data-table td {
+    padding: 11px 14px;
+    text-align: right;
+    border-bottom: 1px solid var(--rule);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .data-table th:first-child, .data-table td:first-child {
+    text-align: left;
+    font-variant-numeric: normal;
+  }
+
+  .data-table thead th {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--muted);
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .data-table tbody tr:last-child td { border-bottom: none; }
+
+  .data-table td.highlight { color: var(--accent); font-weight: 600; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 56px 0 72px;
+  }
+
+  footer .name {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    margin: 0 0 6px;
+  }
+
+  footer .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  footer a { text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
+
+  @media (max-width: 860px) {
+    .wrap { padding: 0 22px; }
+    header.hero { padding: 64px 0 48px; }
+    .hero h1 { font-size: 2.3rem; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); row-gap: 24px; }
+    .project-body, .project:nth-child(odd) .project-body {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+    .project { padding: 56px 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <h1>Urviksinh Zala</h1>
+    <p class="role">Data Analyst — SQL, Excel &amp; Tableau</p>
+    <p class="lede">Two projects, two unrelated datasets — a student mental health survey and Spotify streaming data — built around the same habit: get to a specific number, then be honest about what it can and can't prove.</p>
+    <div class="hero-links">
+      <a href="https://github.com/urvikzala" target="_blank" rel="noopener">GitHub</a>
+      <a href="#student-stress">Student Stress Project</a>
+      <a href="#record-labels">Record Label Project</a>
+    </div>
+  </div>
+</header>
+
+<!-- PROJECT 1: Excel / Tableau -->
+<section class="project" id="student-stress">
+  <div class="wrap">
+    <div class="project-head">
+      <h2>Student Stress &amp; Mental Health</h2>
+      <span class="project-tools">Excel · Tableau</span>
+    </div>
+    <p class="project-question">Which factors are most associated with student stress, and what would a school actually do with that information?</p>
+
+    <div class="stat-row">
+      <div class="stat"><span class="num">1,100</span><span class="label">student records</span></div>
+      <div class="stat"><span class="num">21</span><span class="label">variables analyzed</span></div>
+      <div class="stat"><span class="num">55%</span><span class="label">anxiety increase, low to high bullying</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">recommendations for schools</span></div>
+    </div>
+
+    <div class="project-body">
+      <div>
+        <ul class="findings">
+          <li>Bullying is linked to a <strong>55% increase in anxiety</strong> and a <strong>33% drop in self-esteem</strong> between the least- and most-bullied groups — though the pattern isn't perfectly linear, so I'm treating it as an association, not proof.</li>
+          <li>High-stress students show a <strong>2.83-point drop in sleep quality</strong>, the single largest lifestyle swing anywhere in the dataset.</li>
+          <li>One mental-health-score group breaks the pattern entirely — the lowest study load in the dataset, but still weak academic performance. Flagged as an open question rather than an assumption about motivation.</li>
+        </ul>
+        <a class="view-link" href="https://github.com/urvikzala/student-stress-excel-tableau-analysis" target="_blank" rel="noopener">View the full analysis on GitHub</a>
+      </div>
+      <div>
+        <div class="visual-frame">
+        <div class='tableauPlaceholder' id='vizStudentStress' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Student Stress and Mental Health Analysis' src='https://public.tableau.com/static/images/St/StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis/1_rss.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/St/StudentStressandMentalHealthAnalysis/StudentStressandMentalHealthAnalysis/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('vizStudentStress');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width='100%';
+          vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascript/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 2: SQL -->
+<section class="project" id="record-labels">
+  <div class="wrap">
+    <div class="project-head">
+      <h2>Record Label Performance in Spotify's Most-Streamed Songs</h2>
+      <span class="project-tools">SQLite</span>
+    </div>
+    <p class="project-question">Which record label is actually running the smartest business — and how much of its lead is new hits versus old catalogue?</p>
+
+    <div class="stat-row">
+      <div class="stat"><span class="num">4,600</span><span class="label">tracks analyzed</span></div>
+      <div class="stat"><span class="num">1,999</span><span class="label">unique artists</span></div>
+      <div class="stat"><span class="num">58</span><span class="label">artists mapped to labels</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">business questions</span></div>
+    </div>
+
+    <div class="project-body">
+      <div>
+        <ul class="findings">
+          <li>Universal leads on total streams, but <strong>61.8% of that comes from pre-2020 catalogue</strong> — a lot of the lead is legacy, not new hits.</li>
+          <li>Independent artists convert TikTok attention into Spotify streams at <strong>285.94%</strong> — more than five times Sony's rate of 53.5%, though on a sample of just two artists.</li>
+          <li><strong>Avicii still sits at 178% of Universal's per-artist average</strong>, six years after his death — one of the clearer signals of how long a strong catalogue keeps earning.</li>
+        </ul>
+        <a class="view-link" href="https://github.com/urvikzala/record-labels-sql-analysis" target="_blank" rel="noopener">View the full analysis on GitHub</a>
+      </div>
+      <div>
+        <div class="visual-frame">
+        <table class="data-table">
+          <caption>Spotify-to-TikTok activity ratio, by label</caption>
+          <thead>
+            <tr><th>Label</th><th>TikTok Views</th><th>Spotify Streams</th><th>Ratio</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Independent</td><td>5,334,014,620</td><td>15,252,232,875</td><td class="highlight">285.94%</td></tr>
+            <tr><td>Warner</td><td>72,480,926,242</td><td>106,471,592,168</td><td>146.52%</td></tr>
+            <tr><td>Universal</td><td>373,423,864,810</td><td>464,283,289,193</td><td>124.33%</td></tr>
+            <tr><td>Sony</td><td>279,127,006,869</td><td>149,341,709,207</td><td>53.50%</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="name">Urviksinh Zala</p>
+    <p class="meta"><a href="https://github.com/urvikzala" target="_blank" rel="noopener">github.com/urvikzala</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
